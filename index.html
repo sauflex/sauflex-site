@@ -1,88 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CITIX™ by SauFlex</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff;
-            color: #222;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: #000;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #f5c518;
-        }
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .button {
-            background: #f5c518;
-            color: #000;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            padding: 15px;
-            font-size: 24px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CITIX™ by SauFlex - Online Store</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>CITIX™ by SauFlex</h1>
-        <p>Comfortable Cotton Essentials for Everyday Elegance</p>
-    </header>
+  <header>
+    <h1>CITIX™ by SauFlex</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-    <div class="section">
-        <h2>Explore Our Bestselling Petticoats</h2>
-        <p>Pure Cotton • Adjustable Fit • Skin-Friendly</p>
-        <a href="https://www.amazon.in" target="_blank" class="button">Buy Now on Amazon</a>
-    </div>
+  <main>
+    <section class="products">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51BEHOusuLL._SY500_.jpg" alt="Black Petticoat 2XL" />
+        <h3>Women's Black Pure Cotton Petticoat - 2XL</h3>
+        <p>₹249 - Adjustable Waist, Saree Underskirt, Skin-Friendly Fabric (42" Waist)</p>
+        <button onclick="addToCart('Black 2XL', 249)">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51BEHOusuLL._SY500_.jpg" alt="Black Petticoat 3XL" />
+        <h3>Women's Black Pure Cotton Petticoat - 3XL</h3>
+        <p>₹299 - Adjustable Waist, Saree Underskirt, Skin-Friendly Fabric (52" Waist)</p>
+        <button onclick="addToCart('Black 3XL', 299)">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/41rnh2hGKOL._SY741_.jpg" alt="White Petticoat 2XL" />
+        <h3>Women's White Pure Cotton Petticoat - 2XL</h3>
+        <p>₹249 - Adjustable Waist, Saree Underskirt, Skin-Friendly Fabric (42" Waist)</p>
+        <button onclick="addToCart('White 2XL', 249)">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/41rnh2hGKOL._SY741_.jpg" alt="White Petticoat 3XL" />
+        <h3>Women's White Pure Cotton Petticoat - 3XL</h3>
+        <p>₹299 - Adjustable Waist, Saree Underskirt, Skin-Friendly Fabric (52" Waist)</p>
+        <button onclick="addToCart('White 3XL', 299)">Buy Now</button>
+      </div>
+    </section>
+  </main>
 
-    <div class="section">
-        <h2>Contact Us</h2>
-        <p>Email: flexsau@gmail.com<br>
-        Phone: +91 9226494403</p>
-    </div>
+  <footer>
+    <p>Contact us at flexsau@gmail.com | +91 9226494403</p>
+    <p>&copy; CITIX™ by SauFlex</p>
+  </footer>
 
-    <a class="whatsapp" href="https://wa.me/919226494403" target="_blank">💬</a>
-
-    <footer>
-        &copy; 2025 CITIX™ by SauFlex. All Rights Reserved.
-    </footer>
+  <script>
+    function addToCart(product, price) {
+      localStorage.setItem('product', product);
+      localStorage.setItem('price', price);
+      window.location.href = 'checkout.html';
+    }
+  </script>
 </body>
 </html>
